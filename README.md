@@ -1,10 +1,14 @@
 # CSES Learning Tool
 
-A simple Python script to help competitive programmers learn more effectively by recommending [CSES Problem Set](https://cses.fi/problemset/) problems based on popularity (which correlates with difficulty and how important the problem is).
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
+
+A simple Python script to sort unsolved CSES problems by popularity, helping you learn more effectively by recommending [CSES Problem Set](https://cses.fi/problemset/) problems based on popularity (which correlates with difficulty and importance).
 
 ## Why This Tool?
 
-Reduce decision fatigue and avoid wasting time on obscure niche algorithms when you should be building fundamentals first.
+Reduce decision fatigue and avoid wasting time on obscure niche algorithms when you should be building fundamentals first. CSES lacks this essential sorting feature.
 
 ## Features
 
@@ -22,7 +26,7 @@ Reduce decision fatigue and avoid wasting time on obscure niche algorithms when 
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/cses-learning-tool.git
+git clone https://github.com/mcjmk/cses-learning-tool.git
 cd cses-learning-tool
 
 # Install dependencies
