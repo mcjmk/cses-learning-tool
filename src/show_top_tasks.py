@@ -8,11 +8,15 @@ def main():
     df = pd.read_csv(CSV_PATH)
 
     if "done" in df.columns:
-        df = df[~df["done"]]
+        df = df[~df["done"].astype(bool)]
 
-    df_sorted = df.sort_values("solvers", ascending=False)
+    if df.empty or not isinstance(df, pd.DataFrame):
+        print("No unsolved problems found")
+        return
 
-    top = df_sorted.head(TOP_N)[["id", "title", "solvers", "url"]]
+    top = df.nlargest(TOP_N, "solvers")[["id", "title", "solvers", "url"]].reset_index(
+        drop=True
+    )
 
     print(f"Top {TOP_N} most-solved yet unsolved problems:")
     for i, (_, row) in enumerate(top.iterrows(), 1):
