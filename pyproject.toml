@@ -1,0 +1,40 @@
+[project]
+name = "cses-learning-tool"
+version = "0.1.0"
+description = "A tool to help competitive programmers tackle CSES Problem Set by recommending problems based on community popularity"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "pandas>=2.3.3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pyright>=1.1.407",
+    "pytest>=8.4.2",
+    "ruff>=0.14.3",
+]
+
+[tool.ruff]
+line-length = 88
+fix = true
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "I",   # isort (import sorting)
+  "B",   # flake8-bugbear (catches subtle bugs)
+  "UP",  # pyupgrade (modernizes code)
+]
+
+[tool.pyright]
+typeCheckingMode = "basic"
+include = ["src"]
+reportMissingTypeStubs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
