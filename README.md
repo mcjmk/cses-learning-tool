@@ -4,16 +4,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 
-A simple Python script to sort unsolved CSES problems by popularity, helping you learn more effectively by recommending [CSES Problem Set](https://cses.fi/problemset/) problems based on popularity (which correlates with difficulty and importance).
-
+A simple Python tool that recommends which CSES problems to solve next — ranked by popularity so you can focus on the most important ones first.
 ## Why This Tool?
 
 Reduce decision fatigue and avoid wasting time on obscure niche algorithms when you should be building fundamentals first. CSES lacks this essential sorting feature.
 
 ## Features
 
-- Parse your CSES problem set progress
-- Get top N most-solved problems you haven't completed yet
+- Parses your CSES problem set progress from html
+- Recommends the top *N* most-solved problems you haven’t completed yet
 
 ## Prerequisites
 
